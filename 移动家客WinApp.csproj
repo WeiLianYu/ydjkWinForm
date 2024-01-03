@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B4E0F921-DF06-442C-A318-9D0AA55F4EDD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>移动家客WinApp</RootNamespace>
+    <AssemblyName>移动家客WinApp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>D:\publish\app\ydjkWinform\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://localhost:9003/</InstallUrl>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>port.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>443C2BBD3ADBF306FDA23545BAE03CD90BA29E29</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>移动家客WinApp_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BarcodePrinter_API, Version=1.4.0.52, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\BarcodePrinter_API.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Business\IService\IDictionaryService.cs" />
+    <Compile Include="Business\IService\IFxScrapRecordService.cs" />
+    <Compile Include="Business\IService\IFxQRTemplateService.cs" />
+    <Compile Include="Business\IService\IFxLogisticsService.cs" />
+    <Compile Include="Business\IService\ITerminalModelService.cs" />
+    <Compile Include="Business\IService\IFxTerminalAccountService.cs" />
+    <Compile Include="Business\IService\IFxBoxService.cs" />
+    <Compile Include="Business\IService\IAreaService.cs" />
+    <Compile Include="Business\IService\ISigninService.cs" />
+    <Compile Include="Business\Service\DictionaryService.cs" />
+    <Compile Include="Business\Service\BaseService.cs" />
+    <Compile Include="Business\Service\FxScrapRecordService.cs" />
+    <Compile Include="Business\Service\FxTerminalAccountService.cs" />
+    <Compile Include="Business\Service\FxQRTemplateService.cs" />
+    <Compile Include="Business\Service\FxLogisticsService.cs" />
+    <Compile Include="Business\Service\TerminalModelService.cs" />
+    <Compile Include="Business\Service\FxBoxService.cs" />
+    <Compile Include="Business\Service\AreaService.cs" />
+    <Compile Include="Business\Service\SigninService.cs" />
+    <Compile Include="Comm\AutoSizeForm.cs" />
+    <Compile Include="Comm\IPrintBase.cs" />
+    <Compile Include="Comm\Loger.cs" />
+    <Compile Include="Comm\ShowException.cs" />
+    <Compile Include="Comm\SNet_Code.cs" />
+    <Compile Include="Comm\TSCLIB_DLL.cs" />
+    <Compile Include="Comm\ConfigurationManagerHelpeor.cs" />
+    <Compile Include="Comm\HttpWebRequestHelper.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Input\Fx\EidtBoxStateDto.cs" />
+    <Compile Include="Model\Input\Fx\Add_FxLogisticsDto.cs" />
+    <Compile Include="Model\Input\ScrapRecord\ScrapRecordInput.cs" />
+    <Compile Include="Model\Output\ScrapRecord\FxScrapRecordListDto.cs" />
+    <Compile Include="Model\TerminalModelGroup.cs" />
+    <Compile Include="Model\Input\Fx\GetList_FxTerminalAccountDto.cs" />
+    <Compile Include="Model\Input\Fx\GetList_LogisticsDto.cs" />
+    <Compile Include="Model\Input\QR\GetInfo_QRDto.cs" />
+    <Compile Include="Model\Input\Fx\GetList_FxBoxDto.cs" />
+    <Compile Include="Model\Input\Fx\Add_FxTerminalAccountDto.cs" />
+    <Compile Include="Model\Input\Fx\Add_FxBoxDto.cs" />
+    <Compile Include="Model\Input\Terminal\GetList_TerminalModelDto.cs" />
+    <Compile Include="Model\Output\BaseDto.cs" />
+    <Compile Include="Model\Output\ErrorDto.cs" />
+    <Compile Include="Model\Output\Fx\FxTerminalAccountListDto.cs" />
+    <Compile Include="Model\Output\Fx\FxLogisticsListDto.cs" />
+    <Compile Include="Model\Output\Fx\FxBoxListDto.cs" />
+    <Compile Include="Model\Output\Signin\UserAndTokenDto.cs" />
+    <Compile Include="Model\Output\Signin\ImageCaptchaDto.cs" />
+    <Compile Include="Model\Output\System\DictionaryDto.cs" />
+    <Compile Include="Model\Output\System\AreaDto.cs" />
+    <Compile Include="Model\Output\QR\QRTemplateDto.cs" />
+    <Compile Include="Model\Output\Terminal\TerminalModelDto.cs" />
+    <Compile Include="Select_Logistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Select_Logistics.Designer.cs">
+      <DependentUpon>Select_Logistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Select_TerminalModel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Select_TerminalModel.Designer.cs">
+      <DependentUpon>Select_TerminalModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SerialPortLib\ArgonPPLB.cs" />
+    <Compile Include="SerialPortLib\TSCPrint.cs" />
+    <Compile Include="SerialPortSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SerialPortSetting.Designer.cs">
+      <DependentUpon>SerialPortSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScanCodeMatchSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScanCodeMatchSettings.Designer.cs">
+      <DependentUpon>ScanCodeMatchSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SealingBoxAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SealingBoxAdd.Designer.cs">
+      <DependentUpon>SealingBoxAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ScrapRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScrapRecord.Designer.cs">
+      <DependentUpon>ScrapRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SerialPortLib\ArrayExtension.cs" />
+    <Compile Include="SerialPortLib\CommonProtocol.cs" />
+    <Compile Include="SerialPortLib\ISerialPortProtocol.cs" />
+    <Compile Include="SerialPortLib\SerialPortHelper.cs" />
+    <Compile Include="Signin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Signin.Designer.cs">
+      <DependentUpon>Signin.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Select_Logistics.resx">
+      <DependentUpon>Select_Logistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Select_TerminalModel.resx">
+      <DependentUpon>Select_TerminalModel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SerialPortSetting.resx">
+      <DependentUpon>SerialPortSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ScanCodeMatchSettings.resx">
+      <DependentUpon>ScanCodeMatchSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SealingBoxAdd.resx">
+      <DependentUpon>SealingBoxAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScrapRecord.resx">
+      <DependentUpon>ScrapRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Signin.resx">
+      <DependentUpon>Signin.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="移动家客WinApp_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BarcodePrinter_API.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TSCLIB.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="port.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Dependency\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
